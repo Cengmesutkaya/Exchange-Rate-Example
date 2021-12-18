@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Exchange_Rate_Example.Models.ExchangeRateModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2>Example of Exchange Rate</h2>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Prefix Name</th>
+                <th>Name</th>
+                <th>Buying</th>
+                <th>Selling</th>
+                <th>Changing</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.RateTypeName</td>
+                    <td>@item.Names</td>
+                    <td>@item.Buying</td>
+                    <td>@item.Selling</td>
+                    <td>@item.Changing</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
